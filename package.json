@@ -1,0 +1,32 @@
+{
+  "name": "imgresize",
+  "version": "1.0.0",
+  "description": "imgresize clientside",
+  "main": "src/js/index.js",
+  "scripts": {
+    "clean": "rm -rf build && mkdir build",
+    "copy": "cp src/index.html build",
+    "build-js": "browserify src/js/index.js > build/bundle.js",
+    "build": "npm run clean && npm run copy && npm run build-js",
+    "start": "npm run build && static build",
+    "watch": "watch 'npm run build' src",
+    "deploy": "npm run build && ./bin/deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boennemann/imgresize.git"
+  },
+  "bugs": {
+    "url": "https://github.com/boennemann/imgresize/issues"
+  },
+  "homepage": "https://github.com/boennemann/imgresize",
+  "devDependencies": {
+    "browserify": "^6.3.2",
+    "node-static": "^0.7.6",
+    "watch": "^0.13.0"
+  },
+  "dependencies": {
+    "jquery": "^2.1.1",
+    "jszip": "^2.4.0"
+  }
+}
