@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "jquery": "^2.1.1",
-    "jszip": "^2.4.0"
+    "jszip": "^2.4.0",
+    "unique-random": "^1.0.0"
   }
 }
